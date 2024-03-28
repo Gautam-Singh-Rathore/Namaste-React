@@ -1,0 +1,4 @@
+// to configur
+{
+    // "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+  }

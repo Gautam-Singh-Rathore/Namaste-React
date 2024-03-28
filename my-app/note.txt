@@ -1,0 +1,121 @@
+1.capabilites of bundlers - 
+*Created A Server
+*HMR - Hot Module Replacement
+*File Watcher algorithm - c++
+*BUNDLING
+*MINIFY
+*Cleaning our Code
+*Dev and production build
+*Super fast build algorithm
+*Image optimisatio
+*Caching while devlopment
+*Compression
+*Compatible with older version of browser
+*HTTPS on dev 
+*port number
+*Consistent hashing algorithm
+*Zero config
+*Tree shaking - Removing unwanted code(removing unused functions)
+
+2.transitive Dependencies
+
+3.if multiple children are there then always give keys(should always be uniwue) to them as  prop (Diffig Algorithm)
+
+4.React.createElement => Object =>HTML(DOM)
+
+5.instead of react.createElement(becomes very messy in complicated things) we use .jsx
+
+6. By Bable - JSX => react.createElement => Object =>HTML(DOM)
+
+7.react try to make devloper experience better.
+
+8.BABEL
+
+9.React Component
+-- Functional Component - NEW
+-- Class Based Component - OLD
+
+10. Name of component starts with a capital letter
+
+11.{any js code inside curly bracket}
+--- jsx do sanitisation.
+
+12.<Title/>--component composition or composing components
+
+13. should use key when there are a lot of siblings
+
+14.React.Fragment - shorthand is <></>
+-- we cannot give attributes to a react fragment.
+-- JSX - one parent
+
+15. inline style in react or jsx --- styleObj -- {{styleObj}}  or  {{backgroundColor:"red" , border:"1px solid red"}}.
+
+16. ***CONFIG DRIVEN UI ***
+
+17. no key(never do this) <<<<<< index key(use only as a last option) << unique key
+
+18. // Default import
+    import Header from "./Header"
+    // Named import
+    import {Title } from "./Header"
+    // To import all the functions
+    import * as obj from "./Header"
+
+19.Optional Chaining
+     Optional chaining is a feature introduced in JavaScript to simplify accessing properties of nested objects without the need for numerous null checks. It allows you to safely access deeply nested properties without throwing errors if any intermediate property is null or undefined.
+
+        Here's how it works:
+
+        Consider the following object:
+
+        javascript
+        Copy code
+        const user = {
+        name: "John",
+        address: {
+            city: "New York",
+            postalCode: 12345
+        }
+        };
+        If you want to access the postal code of the user's address, you might do it like this:
+
+        javascript
+        Copy code
+        const postalCode = user.address ? user.address.postalCode : null;
+        With optional chaining, you can simplify this by using the ?. operator:
+
+        javascript
+        Copy code
+        const postalCode = user.address?.postalCode;
+        If user.address is null or undefined, postalCode will be assigned undefined, but no error will be thrown. This is particularly useful when dealing with APIs where you may not have control over the structure of the returned data and want to gracefully handle cases where certain properties may be missing.
+
+20.Try and Catch
+        The try and catch statements are part of JavaScript's error-handling mechanism, allowing developers to handle exceptions (errors) that may occur during the execution of code.
+
+        Here's how try and catch work together:
+
+        try block: The code that might generate an error is enclosed within a try block. It allows you to define a block of code where you anticipate errors might occur.
+
+        catch block: If an error occurs within the try block, control is passed to the corresponding catch block. The catch block contains code to handle the error gracefully. It specifies what to do in case an exception of a particular type is thrown.
+
+        javascript
+        Copy code
+        try {
+        // Code that might generate an error
+        // This could be a function call, API request, or any other operation
+        } catch (error) {
+        // Code to handle the error
+        // This block executes when an error occurs within the try block
+        }
+        Here's how the process works:
+
+        The code within the try block is executed.
+        If no errors occur, the catch block is skipped entirely, and the execution continues after the try...catch statement.
+        If an error occurs within the try block, control immediately jumps to the corresponding catch block.
+        The error object (usually named error, but you can name it anything you like) is passed to the catch block, containing information about the error, such as its message and stack trace.
+        The code within the catch block is executed, allowing you to handle the error in a controlled manner. This might involve logging the error, providing a fallback behavior, or gracefully recovering from the error.
+        Using try...catch blocks is particularly useful for scenarios where you anticipate errors that you want to handle gracefully, such as when dealing with network requests, file operations, or interactions with external systems. It helps prevent crashes and provides a mechanism for error recovery and logging.
+
+
+
+
