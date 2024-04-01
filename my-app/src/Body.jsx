@@ -4,6 +4,7 @@ import "./index.css"
 import {IMG_CDN_URL} from "./constants"
 import {restaurantList} from "./constants"
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 // Card 
     function Card(props){
         return(
@@ -42,11 +43,11 @@ import Shimmer from "./Shimmer";
     //*getData function
     async function getData() {
       try {
-        const request = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.95250&lng=75.71050&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const request = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9124336&lng=75.7872709&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const data = await request.json(); 
     
         // Ensure nested properties exist before setting state
-        const restaurantsData = data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        const restaurantsData = data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     
         if (restaurantsData) {
           setAllRest(restaurantsData);
@@ -111,7 +112,7 @@ import Shimmer from "./Shimmer";
              <h1>No Restaurant match your filter !!!</h1>
             :
             rests.map((rest)=>{
-                return(<Card {...rest.info} key={rest.info.id}/>);
+                return(<Link to= {"/restaurants/" + rest.info.id} key={rest.info.id}><Card {...rest.info} /></Link>);
             })
         }
         </div>

@@ -116,6 +116,15 @@
         The code within the catch block is executed, allowing you to handle the error in a controlled manner. This might involve logging the error, providing a fallback behavior, or gracefully recovering from the error.
         Using try...catch blocks is particularly useful for scenarios where you anticipate errors that you want to handle gracefully, such as when dealing with network requests, file operations, or interactions with external systems. It helps prevent crashes and provides a mechanism for error recovery and logging.
 
+21.Never make component inside a component.
+22.never make state variable inside if-else condition
+    eg. if(){
+        const[num , setNum] = useState(10);
+    } // this is wrong - react does not like inconsistencies
+
+    -- Also vener write inside a for loop.
+
+23.never create a local state variable outside the functional component and never use it outside the functional component.
 
 
 
